@@ -1,4 +1,4 @@
-﻿namespace Lab1_1
+﻿namespace Lab1_4
 {
     public class Shapes
     {
