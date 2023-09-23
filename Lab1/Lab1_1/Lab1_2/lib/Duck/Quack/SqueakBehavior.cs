@@ -1,4 +1,4 @@
-﻿namespace Lab1_1.lib.Duck.Quack
+﻿namespace Lab1_2.lib.Duck.Quack
 {
     public class SqueakBehavior : IQuackBehavior
     {

@@ -1,4 +1,4 @@
-﻿namespace Lab1_1.lib.Duck.Dance
+﻿namespace Lab1_2.lib.Duck.Dance
 {
     public class MinuetDance : IDanceBehavior
     {

@@ -1,9 +1,8 @@
-﻿using Lab1_1.lib.Duck;
-using Lab1_1.lib.Duck.Fly;
+﻿using Lab1_2.lib.Duck;
+using Lab1_2.lib.Duck.Fly;
+using static Lab1_2.lib.DuckFunctions;
 
-using static Lab1_1.lib.DuckFunctions;
-
-namespace Lab1_1 
+namespace Lab1_2 
 {
     internal class Program
     {

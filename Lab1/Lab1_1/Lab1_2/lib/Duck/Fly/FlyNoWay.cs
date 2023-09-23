@@ -1,4 +1,4 @@
-﻿namespace Lab1_1.lib.Duck.Fly
+﻿namespace Lab1_2.lib.Duck.Fly
 {
     public class FlyNoWay : IFlyBehavior
     {

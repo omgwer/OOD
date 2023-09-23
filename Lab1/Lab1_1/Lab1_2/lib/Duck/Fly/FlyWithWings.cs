@@ -1,10 +1,12 @@
-﻿namespace Lab1_1.lib.Duck.Fly
+﻿namespace Lab1_2.lib.Duck.Fly
 {
     public class FlyWithWings : IFlyBehavior
     {
+        private uint _flyCounter = 0;
         public void Fly()
         {
-            Console.WriteLine("I'm flying with wings!!");
+            _flyCounter++;
+            Console.WriteLine($"I'm flying with wings for the {_flyCounter} time!!");
         }
     }
 }
