@@ -9,22 +9,22 @@ namespace Lab1_1
     {
         private static void Main(string[] args)
         {
-            MallardDuck mallardDuck;
+            MallardDuck mallardDuck = new();
             PlayWithDuck(mallardDuck);
 
-            RedheadDuck redheadDuck;
+            RedheadDuck redheadDuck = new();
             PlayWithDuck(redheadDuck);
 
-            RubberDuck rubberDuck;
+            RubberDuck rubberDuck = new();
             PlayWithDuck(rubberDuck);
 
-            DecoyDuck decoyDuck;
+            DecoyDuck decoyDuck = new();
             PlayWithDuck(decoyDuck);
 
-            ModelDuck modelDuck;
+            ModelDuck modelDuck = new();
             PlayWithDuck(modelDuck);
 
-            modelDuck.SetFlyBehavior(std::make_unique<FlyWithWings>());
+            modelDuck.SetFlyBehavior(new FlyWithWings());
             PlayWithDuck(modelDuck);
         }
     }

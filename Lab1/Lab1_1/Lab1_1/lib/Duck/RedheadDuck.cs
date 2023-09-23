@@ -5,7 +5,7 @@ namespace Lab1_1.lib.Duck
 {
     public class RedheadDuck : Duck
     {
-        public RedheadDuck(IFlyBehavior flyBehavior, IQuackBehavior quackBehavior) : base(flyBehavior, quackBehavior)
+        public RedheadDuck() : base(new FlyWithWings(), new QuackBehavior())
         {
         }
     }
