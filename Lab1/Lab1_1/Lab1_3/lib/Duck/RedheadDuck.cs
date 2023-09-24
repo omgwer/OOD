@@ -1,12 +1,10 @@
-﻿using Lab1_3.lib.Duck.Dance;
-using Lab1_3.lib.Duck.Fly;
-using Lab1_3.lib.Duck.Quack;
+﻿using Lab1_3.lib.Duck.Strategy;
 
 namespace Lab1_3.lib.Duck
 {
     public class RedheadDuck : Duck
     {
-        public RedheadDuck() : base(new FlyWithWings(), new QuackBehavior(), new MinuetDance())
+        public RedheadDuck() : base(FlyStrategy.FlyWithWings, QuackStrategy.Quack, DanceStrategy.DanceMinuet)
         {
         }
     }

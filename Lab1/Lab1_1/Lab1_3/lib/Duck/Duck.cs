@@ -1,16 +1,13 @@
-﻿using Lab1_3.lib.Duck.Dance;
-using Lab1_3.lib.Duck.Fly;
-using Lab1_3.lib.Duck.Quack;
-
+﻿
 namespace Lab1_3.lib.Duck
 {
     public class Duck
     {
-        private IFlyBehavior _flyBehavior;
-        private IQuackBehavior _quackBehavior;
-        private IDanceBehavior _danceBehavior;
+        private Func<Action> _flyBehavior;
+        private Action _quackBehavior;
+        private Func<Action> _danceBehavior;
 
-        public Duck(IFlyBehavior flyBehavior, IQuackBehavior quackBehavior, IDanceBehavior danceBehavior)
+        public Duck(Func<Action> flyBehavior, Action quackBehavior, Func<Action> danceBehavior)
         {
             _flyBehavior = flyBehavior;
             _quackBehavior = quackBehavior;
@@ -19,10 +16,10 @@ namespace Lab1_3.lib.Duck
 
         public void Quack()
         {
-            _quackBehavior.Quack();
+           _quackBehavior();
         }
 
-        public void SetQuackBehavior(IQuackBehavior quackBehavior)
+        public void SetQuackBehavior(Action quackBehavior)
         {
             _quackBehavior = quackBehavior ?? throw new NullReferenceException();
         }
@@ -34,20 +31,20 @@ namespace Lab1_3.lib.Duck
 
         public void Fly()
         {
-            _flyBehavior.Fly();
+            _flyBehavior();
         }
         
-        public void SetFlyBehavior(IFlyBehavior flyBehavior)
+        public void SetFlyBehavior(Func<Action> flyBehavior)
         {
             _flyBehavior = flyBehavior ?? throw new NullReferenceException();;
         }
 
         public void Dance()
         {
-            _danceBehavior.Dance();
+            _danceBehavior();
         }
         
-        public void SetDanceBehavior(IDanceBehavior danceBehavior)
+        public void SetDanceBehavior(Func<Action> danceBehavior)
         {
             _danceBehavior = danceBehavior ?? throw new NullReferenceException();;
         }

@@ -1,12 +1,10 @@
-﻿using Lab1_3.lib.Duck.Dance;
-using Lab1_3.lib.Duck.Fly;
-using Lab1_3.lib.Duck.Quack;
+﻿using Lab1_3.lib.Duck.Strategy;
 
 namespace Lab1_3.lib.Duck
 {
     public class MallardDuck : Duck
     {
-        public MallardDuck() : base(new FlyWithWings(), new QuackBehavior(), new WaltzDance())
+        public MallardDuck() : base(FlyStrategy.FlyWithWings, QuackStrategy.Quack, DanceStrategy.DanceWaltz)
         {
         }
     }
