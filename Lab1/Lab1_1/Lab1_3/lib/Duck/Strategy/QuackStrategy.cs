@@ -2,25 +2,18 @@
 {
     public static class QuackStrategy
     {
-        public static Action QuackNoWay()
+        public static Action QuackNoWay = () =>
         {
-            return () => { };
-        }
+        };
 
-        public static Action Quack()
+        public static Action Quack = () =>
         {
-            return () =>
-            {
-                Console.WriteLine( "Quack Quack!!!" );
-            };
-        }
+            Console.WriteLine( "Quack Quack!!!" );
+        };
 
-        public static Action Squeak()
+        public static Action Squeak = () =>
         {
-            return () =>
-            {
-                Console.WriteLine( "Squeek!!!" );
-            };
-        }
+            Console.WriteLine( "Squeek!!!" );
+        };
     }
 }

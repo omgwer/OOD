@@ -3,25 +3,18 @@ namespace Lab1_3.lib.Duck.Strategy
 {
     public static class DanceStrategy
     {
-        public static readonly Func<Action> DanceNoWay = () =>
+        public static readonly Action DanceNoWay = () =>
         {
-            return () => { };
         };
         
-        public static readonly Func<Action> DanceWaltz = () =>
+        public static readonly Action DanceWaltz = () =>
         {
-            return () =>
-            {
-                Console.WriteLine( "Waltz dance" );
-            };
+            Console.WriteLine( "Waltz dance" );
         };
         
-        public static readonly Func<Action> DanceMinuet = () =>
+        public static readonly Action DanceMinuet = () =>
         {
-            return () =>
-            {
                 Console.WriteLine( "Minuet dance!" );
-            };
         };
     }
 }

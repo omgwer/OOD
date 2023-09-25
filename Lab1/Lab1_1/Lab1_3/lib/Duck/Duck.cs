@@ -3,11 +3,11 @@ namespace Lab1_3.lib.Duck
 {
     public class Duck
     {
-        private Func<Action> _flyBehavior;
+        private Action _flyBehavior;
         private Action _quackBehavior;
-        private Func<Action> _danceBehavior;
+        private Action _danceBehavior;
 
-        public Duck(Func<Action> flyBehavior, Action quackBehavior, Func<Action> danceBehavior)
+        public Duck(Action flyBehavior, Action quackBehavior, Action danceBehavior)
         {
             _flyBehavior = flyBehavior;
             _quackBehavior = quackBehavior;
@@ -34,7 +34,7 @@ namespace Lab1_3.lib.Duck
             _flyBehavior();
         }
         
-        public void SetFlyBehavior(Func<Action> flyBehavior)
+        public void SetFlyBehavior(Action flyBehavior)
         {
             _flyBehavior = flyBehavior ?? throw new NullReferenceException();;
         }
@@ -44,7 +44,7 @@ namespace Lab1_3.lib.Duck
             _danceBehavior();
         }
         
-        public void SetDanceBehavior(Func<Action> danceBehavior)
+        public void SetDanceBehavior(Action danceBehavior)
         {
             _danceBehavior = danceBehavior ?? throw new NullReferenceException();;
         }
