@@ -7,7 +7,7 @@ namespace Lab1_3.lib.Duck
         private Action _quackBehavior;
         private Action _danceBehavior;
 
-        public Duck(Action flyBehavior, Action quackBehavior, Action danceBehavior)
+        public Duck( Action flyBehavior, Action quackBehavior, Action danceBehavior )
         {
             _flyBehavior = flyBehavior;
             _quackBehavior = quackBehavior;
@@ -16,10 +16,10 @@ namespace Lab1_3.lib.Duck
 
         public void Quack()
         {
-           _quackBehavior();
+            _quackBehavior();
         }
 
-        public void SetQuackBehavior(Action quackBehavior)
+        public void SetQuackBehavior( Action quackBehavior )
         {
             _quackBehavior = quackBehavior ?? throw new NullReferenceException();
         }
@@ -33,20 +33,20 @@ namespace Lab1_3.lib.Duck
         {
             _flyBehavior();
         }
-        
-        public void SetFlyBehavior(Action flyBehavior)
+
+        public void SetFlyBehavior( Action flyBehavior )
         {
-            _flyBehavior = flyBehavior ?? throw new NullReferenceException();;
+            _flyBehavior = flyBehavior ?? throw new NullReferenceException(); ;
         }
 
         public void Dance()
         {
             _danceBehavior();
         }
-        
-        public void SetDanceBehavior(Action danceBehavior)
+
+        public void SetDanceBehavior( Action danceBehavior )
         {
-            _danceBehavior = danceBehavior ?? throw new NullReferenceException();;
+            _danceBehavior = danceBehavior ?? throw new NullReferenceException(); ;
         }
 
         public virtual void Display() { }

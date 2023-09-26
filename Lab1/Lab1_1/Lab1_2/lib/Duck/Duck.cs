@@ -10,7 +10,7 @@ namespace Lab1_2.lib.Duck
         private IQuackBehavior _quackBehavior;
         private IDanceBehavior _danceBehavior;
 
-        public Duck(IFlyBehavior flyBehavior, IQuackBehavior quackBehavior, IDanceBehavior danceBehavior)
+        public Duck( IFlyBehavior flyBehavior, IQuackBehavior quackBehavior, IDanceBehavior danceBehavior )
         {
             _flyBehavior = flyBehavior;
             _quackBehavior = quackBehavior;
@@ -22,7 +22,7 @@ namespace Lab1_2.lib.Duck
             _quackBehavior.Quack();
         }
 
-        public void SetQuackBehavior(IQuackBehavior quackBehavior)
+        public void SetQuackBehavior( IQuackBehavior quackBehavior )
         {
             _quackBehavior = quackBehavior ?? throw new NullReferenceException();
         }
@@ -36,20 +36,20 @@ namespace Lab1_2.lib.Duck
         {
             _flyBehavior.Fly();
         }
-        
-        public void SetFlyBehavior(IFlyBehavior flyBehavior)
+
+        public void SetFlyBehavior( IFlyBehavior flyBehavior )
         {
-            _flyBehavior = flyBehavior ?? throw new NullReferenceException();;
+            _flyBehavior = flyBehavior ?? throw new NullReferenceException(); ;
         }
 
         public void Dance()
         {
             _danceBehavior.Dance();
         }
-        
-        public void SetDanceBehavior(IDanceBehavior danceBehavior)
+
+        public void SetDanceBehavior( IDanceBehavior danceBehavior )
         {
-            _danceBehavior = danceBehavior ?? throw new NullReferenceException();;
+            _danceBehavior = danceBehavior ?? throw new NullReferenceException(); ;
         }
 
         public virtual void Display() { }

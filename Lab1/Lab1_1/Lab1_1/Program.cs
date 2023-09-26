@@ -3,29 +3,29 @@ using Lab1_1.lib.Duck.Fly;
 
 using static Lab1_1.lib.DuckFunctions;
 
-namespace Lab1_1 
+namespace Lab1_1
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        private static void Main( string[] args )
         {
             MallardDuck mallardDuck = new();
-            PlayWithDuck(mallardDuck);
+            PlayWithDuck( mallardDuck );
 
             RedheadDuck redheadDuck = new();
-            PlayWithDuck(redheadDuck);
+            PlayWithDuck( redheadDuck );
 
             RubberDuck rubberDuck = new();
-            PlayWithDuck(rubberDuck);
+            PlayWithDuck( rubberDuck );
 
             DecoyDuck decoyDuck = new();
-            PlayWithDuck(decoyDuck);
+            PlayWithDuck( decoyDuck );
 
             ModelDuck modelDuck = new();
-            PlayWithDuck(modelDuck);
+            PlayWithDuck( modelDuck );
 
-            modelDuck.SetFlyBehavior(new FlyWithWings());
-            PlayWithDuck(modelDuck);
+            modelDuck.SetFlyBehavior( new FlyWithWings() );
+            PlayWithDuck( modelDuck );
         }
     }
 }

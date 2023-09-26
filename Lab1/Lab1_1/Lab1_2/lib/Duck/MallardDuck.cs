@@ -6,7 +6,7 @@ namespace Lab1_2.lib.Duck
 {
     public class MallardDuck : Duck
     {
-        public MallardDuck() : base(new FlyWithWings(), new QuackBehavior(), new WaltzDance())
+        public MallardDuck() : base( new FlyWithWings(), new QuackBehavior(), new WaltzDance() )
         {
         }
     }
