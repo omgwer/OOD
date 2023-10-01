@@ -1,4 +1,6 @@
-﻿namespace Lab1_4
+﻿using Lab1_4.Data;
+
+namespace Lab1_4
 {
     public class Shapes
     {
@@ -15,7 +17,11 @@
         
         public void HandleInput()
         {
-            
+            Command test = new()
+            {
+                
+            };
+
         }
         
         private void Close()
