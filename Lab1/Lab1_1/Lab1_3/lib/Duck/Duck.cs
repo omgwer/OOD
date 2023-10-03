@@ -1,7 +1,8 @@
 ﻿
 namespace Lab1_3.lib.Duck
 {
-    public class Duck
+    // TODO: Поправить , сделать абстрактный класс
+    public  class Duck
     {
         private Action _flyBehavior;
         private Action _quackBehavior;
@@ -49,6 +50,6 @@ namespace Lab1_3.lib.Duck
             _danceBehavior = danceBehavior ?? throw new NullReferenceException(); ;
         }
 
-        public virtual void Display() { }
+        public abstract void Display();
     }
 }

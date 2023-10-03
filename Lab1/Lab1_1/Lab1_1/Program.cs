@@ -7,7 +7,7 @@ namespace Lab1_1
 {
     internal class Program
     {
-        private static void Main( string[] args )
+        public static void Main( string[] args )
         {
             MallardDuck mallardDuck = new();
             PlayWithDuck( mallardDuck );
