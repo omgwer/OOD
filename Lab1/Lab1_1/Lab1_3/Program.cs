@@ -1,15 +1,16 @@
 ﻿using Lab1_3.lib.Duck;
-using Lab1_3.lib.Duck.Strategy;
 using static Lab1_3.lib.DuckFunctions;
 
-namespace Lab1_3 
+namespace Lab1_3
 {
     internal class Program
     {
-        public static void Main(string[] args)
+        public static void Main( string[] args )
         {
             MallardDuck mallardDuck = new();
-            PlayWithDuck(mallardDuck);
+            PlayWithDuck( mallardDuck );
+
+            PlayWithDuck( mallardDuck );
 
             // RedheadDuck redheadDuck = new();
             // PlayWithDuck(redheadDuck);

@@ -4,7 +4,7 @@ namespace Lab1_3.lib.Duck
 {
     public class MallardDuck : Duck
     {
-        public MallardDuck() : base( FlyStrategy.FlyWithWings, QuackStrategy.Quack, DanceStrategy.DanceWaltz )
+        public MallardDuck() : base( FlyStrategy.FlyWithWings(), QuackStrategy.Quack, DanceStrategy.DanceWaltz )
         {
         }
     }

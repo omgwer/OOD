@@ -6,11 +6,15 @@
         {
         };
 
-        public static readonly Action FlyWithWings = () =>
+        public static readonly Func<Action> FlyWithWings = () =>
         {
             int flyCount = 0;
-            flyCount++;
-            Console.WriteLine( $"I'm flying with wings for the {flyCount}th time!!" );
+
+            return () =>
+            {
+                flyCount++;
+                Console.WriteLine( $"I'm flying with wings for the {flyCount}th time!!" );
+            };
         };
     }
 }
