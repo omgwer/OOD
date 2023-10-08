@@ -1,12 +1,12 @@
 ﻿
 using Lab2_1.Implementation;
 
-WeatherData wd = new WeatherData();
+WeatherData wd = new ();
 
-Display display = new Display();
+Display display = new ();
 wd.RegisterObserver(display);
 
-StatsDisplay statsDisplay = new StatsDisplay();
+StatsDisplay statsDisplay = new ();
 wd.RegisterObserver(statsDisplay);
 
 wd.SetMeasurements(3, 0.7, 760);

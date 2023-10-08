@@ -8,32 +8,7 @@ namespace Lab2_1.Implementation
             _temperature = 0.0,
             _humidity = 0.0,
             _pressure = 760.0;
-
-        protected override WeatherInfo GetChangedData()
-        {
-            throw new NotImplementedException();
-        }
-
-        public double GetTemperature()
-        {
-            return _temperature;
-        }
-
-        public double GetHimidity()
-        {
-            return _humidity;
-        }
-
-        public double GetPressure()
-        {
-            return _pressure;
-        }
-
-        public void MeasurementsChanged()
-        {
-            NotifyObservers();
-        }
-
+        
         public void SetMeasurements( double temp, double humidity, double pressure )
         {
             _pressure = pressure;
@@ -41,6 +16,37 @@ namespace Lab2_1.Implementation
             _humidity = humidity;
             
             MeasurementsChanged();
+        }
+        
+        protected override WeatherInfo GetChangedData()
+        {
+            WeatherInfo info = new ()
+            {
+                Temperature = GetTemperature(),
+                Humidity = GetHumidity(),
+                Pressure = GetPressure()
+            };
+            return info;
+        }
+
+        private double GetTemperature()
+        {
+            return _temperature;
+        }
+
+        private double GetHumidity()
+        {
+            return _humidity;
+        }
+
+        private double GetPressure()
+        {
+            return _pressure;
+        }
+        
+        private void MeasurementsChanged()
+        {
+            NotifyObservers();
         }
     }
 }

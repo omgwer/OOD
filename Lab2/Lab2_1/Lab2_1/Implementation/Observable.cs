@@ -2,7 +2,7 @@
 {
     public abstract class Observable<T> : Interfaces.IObservable<T>
     {
-        private HashSet<Interfaces.IObserver<T>> _observers;
+        private HashSet<Interfaces.IObserver<T>> _observers = new ();
         
         protected abstract T GetChangedData();
         
