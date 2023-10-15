@@ -1,8 +1,8 @@
 ﻿using Lab2_1.Data;
 
-namespace Lab2_1.Implementation
+namespace Lab2_1.Sensors
 {
-    public class Display : Interfaces.IObserver<WeatherInfo>
+    public class SensorsDisplay : Interfaces.IObserver<WeatherInfo>
     {
         public void Update( WeatherInfo data )
         {

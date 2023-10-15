@@ -1,6 +1,7 @@
 ﻿using Lab2_1.Data;
+using Lab2_1.Implementation;
 
-namespace Lab2_1.Implementation
+namespace Lab2_1
 {
     public class WeatherData : Observable<WeatherInfo>
     {
