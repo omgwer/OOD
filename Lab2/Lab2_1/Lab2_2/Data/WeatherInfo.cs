@@ -1,4 +1,4 @@
-﻿namespace Lab2_1.Data
+﻿namespace Lab2_2.Data
 {
     public struct WeatherInfo
     {

@@ -1,6 +1,6 @@
-﻿using Lab2_1.Data;
+﻿using Lab2_2.Data;
 
-namespace Lab2_1.Sensors
+namespace Lab2_2.Sensors
 {
     public class HumidityHistoryStats : AbstractHistoryStats
     {

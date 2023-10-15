@@ -1,8 +1,9 @@
-﻿namespace Lab2_1.Implementation
+﻿namespace Lab2_2.Implementation
 {
     public abstract class Observable<T> : Interfaces.IObservable<T>
     {
         private HashSet<Interfaces.IObserver<T>> _observers = new ();
+        private HashSet<Interfaces.IObserver<T>> _observersToRemove = new ();
         
         protected abstract T GetChangedData();
         
@@ -18,11 +19,18 @@
             {
                 observer.Update( data );
             }
+
+            foreach ( Interfaces.IObserver<T> observer in _observersToRemove )
+            {
+                _observers.Remove( observer );
+            }
+            
+            _observersToRemove.Clear();
         }
 
         public void RemoveObserver( Interfaces.IObserver<T> observer )
         {
-            _observers.Remove( observer );
+            _observersToRemove.Add( observer );
         }
     }
 }
