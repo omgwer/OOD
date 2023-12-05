@@ -5,7 +5,6 @@
         private SortedSet<Interfaces.IObserver<T>> _observers = new ();
         private SortedSet<Interfaces.IObserver<T>> _observersToRemove = new ();
         
-        
         protected abstract T GetChangedData();
         
         public void RegisterObserver( Interfaces.IObserver<T> observer, int priority )
