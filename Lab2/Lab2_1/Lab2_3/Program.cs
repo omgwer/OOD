@@ -15,16 +15,16 @@ using Lab2_3.Sensors;
 WeatherData wd = new ();
 
 SensorsDisplay sensorsDisplay = new ();
-wd.RegisterObserver(sensorsDisplay);
+wd.RegisterObserver(sensorsDisplay, 1);
 
 TemperatureHistoryStats temperatureHistoryStats = new ();
-wd.RegisterObserver(temperatureHistoryStats);
+wd.RegisterObserver(temperatureHistoryStats, 3);
 
 HumidityHistoryStats humidityHistoryStats = new();
-wd.RegisterObserver(humidityHistoryStats );
+wd.RegisterObserver(humidityHistoryStats , 2);
 
 PressureHistoryStats pressureHistoryStats = new();
-wd.RegisterObserver( pressureHistoryStats );
+wd.RegisterObserver( pressureHistoryStats, 3 );
 
 
 wd.SetMeasurements(3, 0.7, 760);
