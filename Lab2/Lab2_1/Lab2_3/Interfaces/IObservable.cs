@@ -1,4 +1,4 @@
-﻿namespace Lab2_2.Interfaces
+﻿namespace Lab2_3.Interfaces
 {
     public interface IObservable<T>
     {

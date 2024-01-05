@@ -1,4 +1,4 @@
-﻿namespace Lab2_2.Implementation
+﻿namespace Lab2_3.Implementation
 {
     public abstract class Observable<T> : Interfaces.IObservable<T>
     {
