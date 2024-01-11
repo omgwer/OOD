@@ -1,6 +1,6 @@
-﻿using Lab2_3.Comparer;
+﻿using Lab2_4.Comparer;
 
-namespace Lab2_3.Implementation
+namespace Lab2_4.Implementation
 {
     public abstract class Observable<T> : Interfaces.IObservable<T>
     {

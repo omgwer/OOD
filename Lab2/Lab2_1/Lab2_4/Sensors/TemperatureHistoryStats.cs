@@ -1,6 +1,6 @@
-﻿using Lab2_3.Data;
+﻿using Lab2_4.Data;
 
-namespace Lab2_3.Sensors
+namespace Lab2_4.Sensors
 {
     public class TemperatureHistoryStats : AbstractHistoryStats
     {
